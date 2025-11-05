@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles.css";
+import "../styles.css";
 
 const Home = () => {
   const [color, setColor] = useState("red"); // Estado del color actual
