@@ -1,18 +1,32 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React, { useState } from "react";
+import "../../styles/index.css";
 
-//Bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap"
+const TrafficLight = () => {
+  const colors = ["red", "yellow", "green"];
+  const [color, setColor] = useState("red");
 
-// index.css'
-import '../styles/index.css'
+  const nextColor = () => {
+    const i = colors.indexOf(color);
+    setColor(colors[(i + 1) % colors.length]);
+  };
 
-// components
-import Home from './components/Home';
+  return (
+    <div className="wrapper">
+      <div id="trafficTop"></div>
+      <div id="container">
+        {colors.map((c) => (
+          <div
+            key={c}
+            className={`${c} light ${color === c ? "active" : ""}`}
+            onClick={() => setColor(c)}
+          ></div>
+        ))}
+      </div>
+      <div className="controls">
+        <button onClick={nextColor}>Siguiente</button>
+      </div>
+    </div>
+  );
+};
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home/>
-  </React.StrictMode>,
-)
+export default TrafficLight;
