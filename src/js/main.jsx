@@ -1,6 +1,15 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
-import Home from "./components/Home.jsx";
+import ReactDOM from "react-dom/client";
 
-const root = createRoot(document.querySelector("#app"));
-root.render(<Home />);
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap";
+
+import "./styles/main.css";
+
+import Home from "./components/Home";
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <Home />
+  </React.StrictMode>
+);
