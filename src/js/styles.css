@@ -1,0 +1,66 @@
+.PpalContainer {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+#trafficTop {
+  width: 12px;
+  height: 260px;
+  background: #222;
+  border-radius: 6px;
+}
+
+#container {
+  width: 120px;
+  padding: 16px;
+  background: #111;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.light {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  opacity: 0.3;
+  border: 3px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.red {
+  background: #ef4444;
+}
+
+.yellow {
+  background: #f59e0b;
+}
+
+.green {
+  background: #22c55e;
+}
+
+.light.active {
+  opacity: 1;
+}
+
+.red.active {
+  box-shadow: 0 0 24px 6px rgba(239, 68, 68, 0.7);
+}
+
+.yellow.active {
+  box-shadow: 0 0 24px 6px rgba(245, 158, 11, 0.7);
+}
+
+.green.active {
+  box-shadow: 0 0 24px 6px rgba(34, 197, 94, 0.7);
+}
