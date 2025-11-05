@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const Semaforo = () => {
   const [color, setColor] = useState("red");
 
-  // Cambia el color en orden: rojo → amarillo → verde → rojo
   const alternateColor = () => {
     const colors = ["red", "yellow", "green"];
     const nextIndex = (colors.indexOf(color) + 1) % colors.length;
@@ -12,7 +11,7 @@ const Semaforo = () => {
 
   return (
     <div className="d-flex flex-column align-items-center justify-content-center min-vh-100">
-      {/* Contenedor del semáforo */}
+
       <div className="background d-flex flex-column align-items-center p-3 rounded-3 mx-auto">
         <button
           onClick={() => setColor("red")}
